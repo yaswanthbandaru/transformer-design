@@ -1,0 +1,20 @@
+We are currently working on spt_strip.ipynb 
+for the strip testing algorithm and it is use normal process with 
+methods from 'Autotransformer' class not to use 'Strip' class.
+
+
+taken the requeired values for strip lamination 
+so that we get cross sectional area above 8.5 mmsq
+
+for given input paramater both the primary and secondary strip 
+laminations are same
+
+now we need stack, tongue, ww, wl
+
+** Issues **
+=>  given our paramater the area product requried for our 
+    calculations is quite large
+
+=>  Given  strip fuction is done when applied for any 
+    parmeter of stack, tongue, ww, wl the function is returning none
+    Instead of a dictionary.
