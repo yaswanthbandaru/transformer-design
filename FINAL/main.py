@@ -10,11 +10,11 @@ import math
 lamination_data = pd.read_csv("https://raw.githubusercontent.com/yaswanthbandaru/transformer-design/main/DATA/EI-Laminations.csv")
 swg_data = pd.read_csv("https://raw.githubusercontent.com/yaswanthbandaru/transformer-design/main/DATA/EMD%20-%20Sheet1.csv")
 
+# program
 
 
 
 # GUI part
-
 app = tk.Tk()
 app.title("Single Phase Transformer")
 

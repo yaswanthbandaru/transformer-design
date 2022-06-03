@@ -94,10 +94,11 @@ class AutoTransformer:
     def find_swg(self, Bare_area):
         swg_data = self.swg_data
         higher_data = swg_data[Bare_area < swg_data['Normal Conductor Area mm²']]
-        required_swg = higher_data.iloc[(higher_data['Normal Conductor Area mm²'] - Bare_area).abs().argsort()[:1]]
+        ## changing the higher data.iloc to swg_data.iloc for nearest one in the below line 
+        required_swg = swg_data.iloc[(swg_data['Normal Conductor Area mm²'] - Bare_area).abs().argsort()[:1]]
         diameter_of_insulated_wire = required_swg['Medium Covering Max']
         a_wp = required_swg['Normal Conductor Area mm²'].max() / 100  # cm^2
-        return required_swg, diameter_of_insulated_wire.max(), a_wp
+        return required_swg, diameter_of_insulated_wire.max(), a_wp 
 
     @staticmethod
     def calculate_stack(area_product, k_ratio):
